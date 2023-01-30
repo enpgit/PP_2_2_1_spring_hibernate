@@ -27,9 +27,12 @@ public class MainApp {
             System.out.println("First Name = " + user.getFirstName());
             System.out.println("Last Name = " + user.getLastName());
             System.out.println("Email = " + user.getEmail());
-            System.out.println("Car Model, Series = " + user.getCar());
+            System.out.println("Car Model = " + user.getCar().getModel());
+            System.out.println("Car Series = " + user.getCar().getSeries());
             System.out.println();
         }
+        User userByCar = userService.getUserByCar("Model1", 1);
+        System.out.println(userByCar);
 
         context.close();
     }
